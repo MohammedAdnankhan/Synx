@@ -1,0 +1,35 @@
+.MT20 {
+  margin: 20px 0px;
+}
+
+.Tex1 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c6969;
+}
+
+.flx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .clu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .Cntop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .Tex1 {
+    font-size: 12px;
+  }
+}
