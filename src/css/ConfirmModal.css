@@ -1,0 +1,47 @@
+.DeleteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.exFont {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.deleteBtn {
+  padding: 20px 40px;
+  font-size: 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #6b5eff;
+  color: white;
+
+  margin: 0 5px;
+}
+
+.cmm {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Mobtn {
+  display: flex;
+  gap: 20px;
+  font-weight: 600;
+}
+
+.Icon {
+  height: 50px;
+  width: 50px;
+  color: rgb(224, 82, 82);
+}
+
+@media screen and (max-width: 500px) {
+
+  .Mobtn {
+    flex-direction: column;
+  }
+}

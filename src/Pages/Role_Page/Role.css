@@ -1,0 +1,198 @@
+.jtfy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnSub {
+    background-color: #6b5eff;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    width: fit-content;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.Gray {
+    background-color: #a4a3a3;
+}
+
+.ModalViewRoleContainer {
+    background: #ffff;
+    border-radius: 5px;
+    padding: 40px;
+    width: 70%;
+}
+
+.inputConatinerStyle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.inpuWiCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.MidCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.SpB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Srt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Wid50 {
+    width: 50%;
+}
+
+.FlxEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Til {
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.Crd {
+    background-color: white;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+.Bdr {
+    /* border-top: 0.5px solid rgb(212, 210, 210); */
+    border-bottom: 0.5px solid rgb(212, 210, 210);
+}
+
+.P20 {
+    padding: 20px;
+}
+
+.Gr {
+    color: rgb(116 114 114);
+    ;
+}
+
+.Wid25 {
+    width: 30%;
+}
+
+
+input[type="checkbox"] {
+    accent-color: #6b5eff !important;
+    /* outline: none;
+
+    appearance: none;
+    -webkit-appearance: none; */
+    outline: none;
+    border-radius: 50%;
+}
+
+input[type="checkbox"]:checked {
+    appearance: auto;
+    clip-path: circle(50% at 50% 50%);
+
+}
+
+.ERRMSG {
+    font-size: 14px;
+    font-weight: 400;
+    color: #e30000;
+}
+
+.inputStyle {
+    background-color: white;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+}
+
+.registeredInputContainer {
+    padding: 15px;
+    border: 1px solid #a4a3a3;
+    border-radius: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.InputCheck {
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid rgb(80, 80, 80);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.Dis {
+    border: 1px solid #ddd;
+    cursor: auto;
+}
+
+.ChkCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    /* border: 1px solid #a4a3a3; */
+    border-radius: 5px;
+
+}
+
+
+.cl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .ModalViewRoleContainer {
+        width: 100%;
+        margin-top: 10%;
+        padding: 10px;
+    }
+
+    .Til {
+        font-size: 14px;
+    }
+
+    .Wid25 {
+        width: 50%;
+    }
+
+    .P20 {
+        padding: 10px;
+    }
+}

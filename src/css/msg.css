@@ -1,0 +1,11 @@
+.alert-title {
+    font-size: 8px;
+}
+
+.toast-popup {
+    z-index: 9999;
+}
+
+.toast-container {
+    z-index: 9999;
+}

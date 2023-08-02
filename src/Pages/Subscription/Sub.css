@@ -1,0 +1,364 @@
+.inputexternalContainer {
+  border: 1px solid grey !important;
+  border-radius: 46px;
+  border-radius: 46px;
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0px;
+}
+
+.inputexternalContainerCreate {
+  border: 1px solid grey !important;
+  border-radius: 46px;
+  border-radius: 46px;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.inputinterContainer {
+  border: none;
+  padding: 20px;
+  font-size: larger;
+  border-radius: 46px;
+  background-color: transparent;
+  width: 70%;
+}
+
+.centit {
+  display: flex;
+  justify-content: center;
+}
+
+.CreateContainer {
+  width: 80%;
+  align-self: center;
+  padding: 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 6px 6px 42px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 42px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 42px -12px rgba(0, 0, 0, 0.75);
+}
+
+.ViewFieldContainer {
+  gap: 10px;
+}
+
+.secondaryFont {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.Viewtitletext {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.Viewtitle {
+  margin: 20px 0px;
+}
+
+
+.btnBack {
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #1a97f5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.mt1 {
+  margin-top: 20px;
+}
+
+.ERR {
+  font-size: 13px;
+  color: red;
+}
+
+.DeleteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.exFont {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.deleteBtn {
+  padding: 20px 40px;
+  font-size: 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  margin: 0 5px;
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delCol {
+  background-color: var(--color-blue);
+  color: white;
+}
+
+.btnContainer {
+  gap: 10px;
+}
+
+.viewTITLE {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.externalViewConatainer {
+  padding: 10px;
+  background-color: rgb(232 230 230);
+}
+
+.InputexternalViewConatainer {
+  padding: 10px;
+  opacity: 0.6;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+}
+
+.viewRowContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.halfLenght {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.halfLenghtno {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colit {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.internalInputField {
+  background-color: transparent;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  font-weight: 500;
+  color: black;
+}
+
+.IniviteBtn {
+  background-color: var(--color-blue);
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .viewRowContainer {
+    flex-direction: column;
+  }
+
+  .halfLenght {
+    width: 100%;
+  }
+
+  .oppos {
+    flex-direction: column;
+  }
+
+  .btnContainer {
+    width: 50%;
+  }
+}
+
+.updateContainer {
+  padding: 40px;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Hd1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.Hd2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.m20 {
+  margin: 20px 0px;
+}
+
+.mainContainer {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer {
+  background: rgba(217, 217, 217, 0.25);
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.fljtsp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Imglogo {
+  font-size: 15rem;
+  color: var(--color-blue);
+  opacity: 0.5;
+}
+
+.uploadImgBtn {
+  padding: 10px 20px;
+  background: #4091b2;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  font-size: 18px;
+  border: none;
+}
+
+.updateBtn {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: var(--color-blue);
+  background-color: transparent;
+  border: 1px solid var(--color-blue);
+  width: fit-content;
+  cursor: pointer;
+}
+
+.billBtn {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: var(--color-blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hughText {
+  font-size: 24px;
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.tinyText {
+  font-size: 12px;
+  color: var(--color-blue);
+  font-weight: 400;
+}
+
+.ghostBtn {
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+
+  cursor: pointer;
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: dotted 5px var(--color-blue);
+  border-style: dashed;
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+.boxContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btnContainer {
+  width: 15%;
+}
+
+.someText {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.oppos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.ERR {
+  font-size: 14px;
+  color: red;
+}
+
+.internalInput {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.line {
+  flex-direction: column;
+}

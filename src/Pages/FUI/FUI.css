@@ -1,0 +1,174 @@
+.fildContaineredit {
+    gap: 20px;
+    /* align-items: center; */
+
+    display: flex;
+    width: 100%;
+    margin: 10px 0px;
+    flex-direction: column;
+}
+
+.Heading {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.externalInput {
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 5px;
+    /* width: 60%; */
+}
+
+.Scrollit {
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.TCent {
+    text-align: center !important;
+}
+
+.FlxInput {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.Pd8 {
+    padding-left: 10px;
+}
+
+.Gry {
+    color: gray;
+}
+
+.Icon {
+    cursor: pointer;
+}
+
+.Hd {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.Rd {
+    color: #ea2020;
+}
+
+.ERBR {
+    border: 0.5px solid #ea2020;
+}
+
+.Pr {
+    color: var(--color-blue);
+}
+
+.HAuto {
+    height: fit-content;
+}
+
+.P10 {
+    padding: 10px;
+}
+
+.ScnTxt {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Flx {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.F50 {
+    width: 50%;
+
+}
+
+.Shadow {
+
+    -webkit-box-shadow: -8px 6px 24px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -8px 6px 24px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: -8px 6px 24px -10px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+}
+
+.Gap20 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.internalInput {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 400;
+}
+
+.End {
+    /* width: 60%; */
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.ER {
+    color: #ea2020;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.MB20 {
+    margin: 10px 0;
+}
+
+.W50 {
+    width: 48% !important;
+}
+
+.Alup {
+    align-items: flex-start !important;
+}
+
+.btnSub {
+    background-color: var(--color-blue);
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+
+    .Rsp {
+        flex-direction: column;
+    }
+
+    .F50 {
+        width: 100%;
+    }
+
+    .W50 {
+        width: 100%;
+    }
+}

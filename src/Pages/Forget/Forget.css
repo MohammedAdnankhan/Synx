@@ -1,0 +1,180 @@
+@import url("../../Global//Const.css");
+
+.loginMainContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.loginImg {
+  width: 100%;
+  object-fit: cover;
+}
+
+.TIL {
+  color: #6b5eff;
+  font-weight: 700;
+  font-size: 38px;
+}
+
+.mper5 {
+  margin-bottom: 5%;
+
+}
+
+.gp {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.roW {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  height: 100%;
+  align-items: center;
+}
+
+.logo1 {
+  width: 13rem;
+  object-fit: cover;
+}
+
+.mtten {
+  margin-top: 20px;
+}
+
+.Heading {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.mtb20 {
+  margin-bottom: 10%;
+}
+
+.ternaryFont {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #6f6c90;
+}
+
+.Iconbg {
+  color: #6b5eff;
+}
+
+.inputContainer {
+  background: #ffffff;
+  border: 1px solid #eff0f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.internalInput {
+  padding: 20px;
+  border: none;
+  border-radius: 46px;
+  width: 80%;
+  font-size: 16px;
+}
+
+.sectionB {
+  flex: 2;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.w60p {
+  width: 70%;
+}
+
+.sectionA {
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  background: #fafbfb;
+  padding: 0px 5%;
+  align-items: center;
+}
+
+.centerit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.nodocor {
+  text-decoration: none;
+}
+
+.widthBtn {
+  background: #6b5eff;
+  border: none;
+  padding: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.optContainer {
+  padding-left: 20px;
+  justify-content: flex-start;
+}
+
+.widthBtn :hover {
+  background: rgba(82, 96, 88, 0.75);
+}
+
+.quantity::-webkit-inner-spin-button,
+.quantity::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.imgContainer {
+  padding: 0px 3%;
+}
+
+@media screen and (max-width: 1200px) {
+  .roW {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .loginMainContainer {
+    height: fit-content;
+  }
+
+  .sectionA {
+    padding: 5%;
+    width: 100%;
+  }
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}

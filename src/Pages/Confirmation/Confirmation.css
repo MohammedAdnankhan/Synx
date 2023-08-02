@@ -1,0 +1,219 @@
+.VH100 {
+  height: 100vh;
+}
+
+.CENT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.H70 {
+  height: auto;
+}
+
+.Flx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.W45 {
+  width: 48%;
+}
+
+.WD100 {
+  width: 100%;
+}
+
+.PImg {
+  border-radius: 5px;
+  object-fit: contain;
+  height: 20vh;
+  transform: scale(1.6);
+}
+
+.HD {
+  width: 300;
+  height: 400;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.T1 {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 24px;
+  color: #4d4d4d;
+}
+
+.IconCont {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.IconEdit {
+  height: 30px;
+  cursor: pointer;
+  width: 30px;
+}
+
+.IniviteBtn {
+  background-color: var(--color-blue);
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.ViewT {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.colit {
+  flex-direction: column;
+}
+
+
+
+.H2 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+}
+
+.ExInpt {
+  background-color: #a5a0e5;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0px;
+}
+
+.COL {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.STR {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.W50 {
+  width: 30%;
+}
+
+.MT15P {
+  margin-bottom: 15%;
+}
+
+.FLX100 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.MT20 {
+  margin: 20px 0px;
+}
+
+.wrapper-container {
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.Cust {
+  background: rgb(117 105 248) !important;
+  width: 10rem !important;
+  padding: 10px 20px;
+}
+
+.inputStyle {
+  background-color: white;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.Wid100 {
+  width: 85% !important;
+}
+
+.inpuContainaer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.Marg {
+  margin: 2% 0;
+}
+
+.Box {
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.Err {
+  border: 1px solid rgb(255, 72, 72);
+  /* font-size: 14px;
+  font-weight: 400; */
+}
+
+.Pr100 {
+  height: 100%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .Flx {
+    flex-direction: column;
+  }
+
+  .Box {
+    flex-direction: column;
+  }
+
+  .W45 {
+    width: 100%;
+  }
+
+
+  .M2 {
+    width: 80% !important;
+  }
+
+  .VT100 {
+    height: auto;
+  }
+
+  .Flip {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+  .Cust {
+    width: 100% !important;
+  }
+
+  .COL {
+    gap: 0px !important;
+  }
+}

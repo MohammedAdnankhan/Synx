@@ -1,0 +1,49 @@
+.cardDT {
+  background-color: white;
+  padding: 40px;
+  border-radius: 5px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: -8px 6px 24px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -8px 6px 24px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: -8px 6px 24px -10px rgba(0, 0, 0, 0.75);
+}
+
+.sedondaryText {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-size: 14px;
+  color: #6f6c90;
+}
+
+.externalFieldDR {
+  padding: 0px 20px;
+  background-color: rgb(205 205 205);
+  border-radius: 5px;
+  border: none;
+  width: fit-content;
+}
+
+.Hd {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.BtnDT {
+  background-color: transparent;
+  border: 1px solid var(--color-blue);
+  padding: 10px 20px;
+  color: var(--color-blue);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.widfit {
+  width: fit-content;
+}

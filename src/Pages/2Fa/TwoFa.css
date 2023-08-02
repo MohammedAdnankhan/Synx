@@ -1,0 +1,82 @@
+.TwoFaCont {
+  display: flex;
+  justify-content: center;
+}
+
+.ERR {
+  color: red;
+  font-size: 14px;
+}
+
+.TwoFaCard {
+  border-radius: 5px;
+  padding: 30px;
+  border: none;
+  width: 30%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: white;
+  -webkit-box-shadow: 11px 11px 36px -3px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 11px 11px 36px -3px rgba(0, 0, 0, 0.37);
+  box-shadow: 11px 11px 36px -3px rgba(0, 0, 0, 0.37);
+}
+
+.titlea1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+}
+
+.Midcent {
+  display: flex;
+  justify-content: center;
+}
+
+.titlea2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+.exInpt {
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.inInpt {
+  padding: 15px 10px;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+}
+
+.btn {
+  background-color: #6b5eff;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 800px) {
+
+  .TwoFaCard {
+    width: 90%;
+  }
+}

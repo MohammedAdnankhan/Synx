@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.container {
+    margin-top: 5%;
+}
+
+.logod {
+    height: 5vh;
+    object-fit: contain;
+}
+
+.g20 {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.flsp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cl {
+    display: flex;
+    flex-direction: column;
+}
+
+.rwfw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mt20p {
+    margin-top: 10%;
+}
+
+.mt5 {
+    margin-top: 3%;
+    padding: 10px;
+}
+
+.bb {
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+.invCont {
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.coll {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: end;
+}
+
+.bld {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mdf {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.f1 {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.f3 {
+    display: flex;
+    flex: 3;
+}
+
+.md {
+    font-size: 16px;
+}

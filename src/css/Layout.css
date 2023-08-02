@@ -1,0 +1,33 @@
+.logofont {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-blue);
+}
+
+.Mb-40 {
+  margin-bottom: 40px;
+}
+
+.P15 {
+  padding: 0px 15px;
+}
+
+.MTB20 {
+  margin: 20px 0px;
+}
+
+.HeaderCon {
+  width: 70%;
+  margin: 3% 0
+}
+
+.HeaderFont {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 800px) {
+  .HeaderFont {
+    font-size: 24px;
+  }
+}
