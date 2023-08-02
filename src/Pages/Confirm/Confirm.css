@@ -1,0 +1,29 @@
+.TH {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.H40W70 {
+  width: 40%;
+  justify-content: center;
+  gap: 20px
+}
+
+.tl {
+  text-align: center;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+  .TH {
+    font-size: 18px;
+  }
+
+  .H40W70 {
+
+    width: 60%;
+    padding: 20px;
+  }
+}

@@ -1,25 +1,11 @@
-import React, { Suspense } from "react";
-import ReactDOM from "react-dom";
-import { HashRouter } from "react-router-dom";
-import { Provider } from "react-redux";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import App from "./App";
-import { configureStore } from "./redux/Store";
-// import "./data";
-import * as serviceWorker from "./serviceWorker";
-import reportWebVitals from "./reportWebVitals";
-import Spinner from "./views/spinner/Spinner";
+import { HashRouter } from "react-router-dom";
 
-ReactDOM.render(
-  <Provider store={configureStore()}>
-    <Suspense fallback={<Spinner />}>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </Suspense>
-  </Provider>,
-  document.getElementById("root")
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <HashRouter>
+    <App />
+  </HashRouter>
 );
-
-serviceWorker.unregister();
-
-reportWebVitals();

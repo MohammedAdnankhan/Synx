@@ -7,14 +7,9 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import moment from "moment/moment";
-
-import BorderColorIcon from "@mui/icons-material/BorderColor";
-import { CROSSICON } from "../../Global/Icons";
-import { CREATE_FUI_ADMIN, Update_Pass, getToken } from "../../Api/GetData";
-
-// import { AiFillEdit } from "react-icons/ai";
-// import { UPDATEPASSPORTDETAIL } from "../../Api/FaceVrify";
-const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
+import { AiFillEdit } from "react-icons/ai";
+import { UPDATEPASSPORTDETAIL } from "../../Api/FaceVrify";
+const Confirmation = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -24,15 +19,23 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
   const [gender, setGender] = useState("");
   const [country, setCountry] = useState("");
   const [countryEr, setCountryEr] = useState("");
-  const [dob, setDob] = useState("01/01/2001");
-  const [exp, setExp] = useState("01/01/2001");
+  const [dob, setDob] = useState("");
+  const [exp, setExp] = useState("");
   const [number, setNumber] = useState("");
-  const [numberEr, setNumberEr] = useState("");
-  const [disable, setDisable] = useState(false);
   const [editedData, setEditedData] = useState({});
-  // const [userId, setUSerId] = useState("");
-  const [selectdob, setselectDob] = useState(null);
-  const [selectExp, setselectExp] = useState("");
+  const [userId, setUSerId] = useState("");
+  let validation = [
+    {
+      name: "name",
+      val: name,
+    },
+    { name: "surName", val: surName },
+    { val: gender, name: "gender" },
+    { val: country, name: "country" },
+    { val: dob, name: "dob" },
+    { val: exp, name: "exp" },
+  ];
+
   const [errorValidatoin, seterrorValidatoin] = useState({
     name: false,
     surName: false,
@@ -41,9 +44,8 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
     dob: false,
     exp: false,
     // number: false,
-    All: false,
+    All: true,
   });
-  let token = getToken();
   function knowGender(abc) {
     if (abc !== "<") {
       return "Male";
@@ -51,17 +53,54 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
       return "Female";
     }
   }
-
-  const handleDateChange = (date, setData, show) => {
-    show(date);
-    const formattedDate = moment(date).format("YYYY-MM-DD");
-    const ft = moment(date).format("YYYYMMDD");
-
-    setData(formattedDate);
+  const formatDate = (dateString) => {
+    let year = parseInt(dateString.slice(0, 2));
+    if (year >= 45) {
+      year += 1900; // Convert 19YY to YYYY format
+    } else {
+      year += 2000; // Convert 20YY to YYYY format
+    }
+    const month = parseInt(dateString.slice(2, 4)) - 1; // Subtract 1 to match JavaScript month (0-indexed)
+    const day = parseInt(dateString.slice(4, 6));
+    return new Date(year, month, day);
   };
 
+  // const ValidatedEdit = () => {
+  //   validation.map((data, i) => {
+  //     console.log("name", data.val);
+  //     let nm = data.name;
+  //     if (data.val.length < 1) {
+  //       seterrorValidatoin((prevState) => ({
+  //         ...prevState,
+  //         [nm]: true,
+  //       }));
+  //     } else {
+  //       seterrorValidatoin((prevState) => ({
+  //         ...prevState,
+  //         [nm]: false,
+  //       }));
+  //     }
+  //   });
+  // };
+  // console.log(errorValidatoin);
+  const handleDateChange = (date, setData) => {
+    const formattedDate = moment(date).format("YYYY MM DD");
+    // console.log(formattedDate);
+    setData(formattedDate);
+  };
+  useEffect(() => {
+    setName(location?.state.userDetail?.names);
+    setSurname(location?.state.userDetail?.surname);
+    setGender(knowGender(location?.state.userDetail?.sex));
+    setCountry(location?.state.userDetail?.nationality);
+    setDob(formatDate(location?.state.userDetail?.date_of_birth));
+    setExp(formatDate(location?.state.userDetail?.expiration_date));
+    setEditedData(location?.state.userDetail);
+    setNumber();
+    setUSerId(sessionStorage.getItem("UID"));
+  }, []);
   function handleEditedData() {
-    let data = {
+    const data = {
       ...editedData, // Spread the existing object
       names: name,
       surname: surName,
@@ -69,7 +108,6 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
       date_of_birth: dob,
       expiration_date: exp,
       sex: gender,
-      number: number,
 
       // Update the value of key2
     };
@@ -88,36 +126,9 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
     } else {
       setCountryEr("");
     }
-    if (number == "") {
-      setNumberEr("Invalid Number");
-    } else {
-      setNumberEr("");
-    }
 
-    if (name !== "" && country !== "" && surName !== "" && number !== "") {
-      setDisable(true);
-      // console.log(data, "123432123");
-      // UPDATEPASSPORTDETAIL(navigate, { userId: userId, data: data });
-
-      // CREATE_FUI_ADMIN(
-      //   token,
-      //   `user/update/${UserId}`,
-      //   { data: data },
-      //   "Details Updated",
-      //   handleTableData
-      // );
-      Update_Pass(token, `user/update/${UserId}`, { data: data })
-        .then((res) => {
-          handleTableData();
-          setOpen(false);
-          setDisable(false);
-          res("Details Updated");
-        })
-        .catch((err) => {
-          // err;
-          setOpen(false);
-          setDisable(false);
-        });
+    if (name !== "" && country !== "" && surName !== "") {
+      UPDATEPASSPORTDETAIL(navigate, { userId: userId, data: data });
     }
   }
 
@@ -127,46 +138,23 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
       All: !errorValidatoin.All,
     }));
   };
-
-  useEffect(() => {
-    // console.log(viewData, "viewData");
-
-    setName(viewData?.passportData?.names);
-    setSurname(viewData?.passportData?.surname);
-    setCountry(viewData?.passportData?.nationality);
-    setGender(viewData?.passportData?.sex);
-    setExp(viewData?.passportData?.expiration_date);
-    setDob(viewData?.passportData?.date_of_birth);
-    setEditedData(viewData?.passportData);
-    setNumber(viewData?.passportData?.number);
-  }, []);
   return (
-    <div className="houseContainer VT100 Pr100 ">
-      <div className="verificationCard W70H80 Marg H70 ">
-        <div className="IconCont Flex">
-          <span className="ViewT">Verification Update</span>
-          {/* <BorderColorIcon
-            style={{
-              color: errorValidatoin.All ? "#6b5eff" : "grey",
-         
-              padding: "5px",
-              height: "30px",
-              width: "30px",
-            }}
+    <div className="houseContainer VT100 ">
+      <div className="verificationCard W70H80 M2 H70 ">
+        <div className="IconCont">
+          <AiFillEdit
             className="IconEdit"
+            style={{ color: errorValidatoin.All ? "grey" : "#6b5eff" }}
             onClick={EnableEdit}
-          /> */}
-          <div onClick={() => setOpen(false)}>
-            <CROSSICON />
-          </div>
+          />
         </div>
-        {/* <div className="CENT MT15P HD">
+        <div className="CENT MT15P HD">
           <img
             src={location?.state?.userImg}
             className="PImg"
             style={{ transform: "scale(1.6) scaleX(-1)" }}
           />
-        </div> */}
+        </div>
 
         <div className="Flx WD100">
           <div className="  COL">
@@ -200,20 +188,6 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
             <div className="Box colit">
               <div className="inpuContainaer">
                 <div>
-                  <span className="T1">Document No</span>
-                </div>
-                <input
-                  className={numberEr ? "inputStyle Err" : "inputStyle"}
-                  value={number}
-                  onChange={(e) => {
-                    setNumber(e.target.value);
-                  }}
-                  disabled={errorValidatoin.All}
-                />
-                {/* {countryEr && <span className="Err">{countryEr}</span>} */}
-              </div>
-              <div className="inpuContainaer">
-                <div>
                   <span className="T1">Nationality</span>
                 </div>
                 <input
@@ -226,7 +200,6 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
                 />
                 {/* {countryEr && <span className="Err">{countryEr}</span>} */}
               </div>
-
               <div className="inpuContainaer">
                 <div>
                   <span className="T1">Gender</span>
@@ -255,10 +228,12 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
 
                 <DatePicker
                   id="dob-input"
-                  selected={selectdob}
+                  selected={formatDate(
+                    location?.state.userDetail?.date_of_birth
+                  )}
                   value={dob}
                   onChange={(e) => {
-                    handleDateChange(e, setDob, setselectDob);
+                    handleDateChange(e, setDob);
                   }}
                   disabled={errorValidatoin.All}
                   dateFormat="yyyy MM dd"
@@ -270,13 +245,21 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
                 <div>
                   <span className="T1">Expiration Date</span>
                 </div>
+                {/* <input
+                className="inputStyle"
+                value={exp}
+                onChange={(e) => setExp(e.target.value)}
+              /> */}
 
                 <DatePicker
                   id="dob-input"
-                  selected={selectExp}
+                  selected={formatDate(
+                    location?.state.userDetail?.expiration_date
+                  )}
                   value={exp}
+                  // onChange={(e) => setExp(e.target.value)}
                   disabled={errorValidatoin.All}
-                  onChange={(e) => handleDateChange(e, setExp, setselectExp)}
+                  onChange={(e) => handleDateChange(e, setExp)}
                   dateFormat="yyyy MM dd"
                   className="inputStyle Wid100"
                 />
@@ -285,20 +268,20 @@ const Confirmation = ({ setOpen, viewData, handleTableData, UserId }) => {
           </div>
         </div>
         <div className="FLX100 MT20 Flip">
-          {/* <div className="STR">
-            <button className="fillBtn  Cust " onClick={() => setOpen(false)}>
+          <div className="STR">
+            <button
+              className="fillBtn  Cust "
+              onClick={() => navigate("/face-verification")}
+            >
               Back
             </button>
-          </div> */}
+          </div>
           <button
-            // className="fillBtn  Cust "
-            className="IniviteBtn"
+            className="fillBtn  Cust "
             // onClick={() => navigate("/select-document")}
-            disabled={disable ? true : false}
-            style={{ background: disable ? "grey" : "#6b5eff" }}
             onClick={handleEditedData}
           >
-            Update
+            Continue
           </button>
         </div>
       </div>

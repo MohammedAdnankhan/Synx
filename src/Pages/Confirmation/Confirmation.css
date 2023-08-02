@@ -50,29 +50,13 @@
 .IconCont {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .IconEdit {
   height: 30px;
   cursor: pointer;
   width: 30px;
-}
-
-.IniviteBtn {
-  background-color: var(--color-blue);
-  padding: 20px;
-  border-radius: 5px;
-  color: white;
-  font-weight: 600;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.ViewT {
-  font-size: 22px;
-  font-weight: 500;
 }
 
 .colit {
@@ -156,10 +140,6 @@
   gap: 10px;
 }
 
-.Marg {
-  margin: 2% 0;
-}
-
 .Box {
 
   display: flex;
@@ -176,10 +156,6 @@
   font-weight: 400; */
 }
 
-.Pr100 {
-  height: 100%;
-}
-
 @media screen and (min-width: 0px) and (max-width: 1000px) {
   .Flx {
     flex-direction: column;
@@ -192,7 +168,6 @@
   .W45 {
     width: 100%;
   }
-
 
   .M2 {
     width: 80% !important;

@@ -1,0 +1,17 @@
+.ErNo {
+    font-size: 32px;
+    font-weight: 600;
+    color: rgb(173, 173, 173);
+    cursor: default
+}
+
+.ErText {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(173, 173, 173);
+    cursor: default
+}
+
+.NoSh {
+    box-shadow: none;
+}

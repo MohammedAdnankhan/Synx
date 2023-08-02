@@ -1,0 +1,16 @@
+.W100 {
+  width: 100%;
+}
+
+.SLTBTN:hover {
+  background-color: #e7e6e6;
+}
+
+.SLTBTN:active {
+  background-color: var(--color-Pri);
+  color: white;
+}
+
+.NB {
+  border: none;
+}

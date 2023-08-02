@@ -1,0 +1,74 @@
+.ICON {
+  background-color: rgb(73 197 73);
+  color: white;
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+}
+
+.PRI {
+  background-color: var(--color-Pri);
+  padding: 5px;
+}
+
+.smallIcon {
+  height: 40px;
+  width: 50px;
+}
+
+.SLTICON {
+  height: 30px;
+  width: 32px;
+  background-color: rgb(73 197 73);
+  color: white;
+  border-radius: 15%;
+}
+
+.YL {
+  background-color: rgb(221 221 89);
+}
+
+.CM {
+  background-color: transparent;
+  color: var(--color-Pri);
+}
+
+.WC {
+  color: white;
+  background-color: var(--color-Pri);
+}
+
+.RD {
+  background-color: rgb(198, 49, 49);
+}
+
+.PRI {
+  color: var(--color-Pri);
+  cursor: pointer;
+  background-color: white;
+}
+
+.SADIMOJI {
+  background-color: transparent;
+  color: rgb(173, 173, 173);
+  height: 70px;
+  width: 70px;
+}
+
+.RP {
+  background-color: var(--color-Pri);
+  padding: 15px;
+  height: 30px;
+  width: 30px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+
+  .ri {
+    height: 50px;
+    width: 50px;
+  }
+}

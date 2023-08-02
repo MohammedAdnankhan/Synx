@@ -1,0 +1,103 @@
+.H60W80 {
+  width: 80%;
+}
+
+.flst {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.verCont {
+  height: 90%;
+  display: flex;
+}
+
+.W50 {
+  width: 50%;
+}
+
+.H1 {
+  font-size: 24px;
+  color: var(--color-Pri);
+  font-weight: 800;
+}
+
+.ST {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.MTB10 {
+  margin: 20px 0px;
+}
+
+.BOXA {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10%;
+}
+
+.SCANIMG {
+  object-fit: contain;
+}
+
+.Center {
+  display: flex;
+  justify-content: center;
+}
+
+.BOXB {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .verCont {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .H60W80 {
+    height: 100%;
+    width: 90%;
+    overflow: auto;
+    padding: 20px !important;
+  }
+
+  .W50 {
+    width: auto;
+    gap: 3%;
+    margin-top: 3%;
+  }
+
+  .W80 {
+    width: 100%;
+  }
+
+  .H1 {
+    font-size: 22px;
+
+    font-weight: 600;
+  }
+
+  .BOXB {
+    margin-top: 10%;
+  }
+
+  .m3p {
+    margin-top: 3%;
+  }
+
+  .ST {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
